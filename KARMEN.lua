@@ -139,9 +139,12 @@ _redis = load_redis()
 --------------------------------------------------------------------------------------------------------------
 print([[
 
+
+━🇰​━🇦​━🇷​━🇲​━🇪​━🇳​━
+
+
 > CH › @K3RMEN
-> CH › @pvv_v
-~> DEVELOPER › @KKKKK4
+~> DEVELOPER › @@K2k_k
 ]])
 sudos = dofile("./Info.lua") 
 SUDO = tonumber(sudos.SUDO)
@@ -154,7 +157,7 @@ io.popen("mkdir File_Bot")
 io.popen("cd File_Bot && rm -rf commands.lua.1") 
 io.popen("cd File_Bot && rm -rf commands.lua.2") 
 io.popen("cd File_Bot && rm -rf commands.lua.3") 
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/KARMENTEAM/Files_KARMEN/master/File_Bot/commands.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/KARMENTEAM/KARMEN/master/File_Bot/commands.lua") 
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
@@ -647,12 +650,12 @@ return false
 end
 end,nil)   
 end  
-function plugin_Poyka(msg)
+function plugin_Mode(msg)
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
 plugin = dofile("File_Bot/"..v)
-if plugin.Poyka and msg then
-pre_msg = plugin.Poyka(msg)
+if plugin.Mode and msg then
+pre_msg = plugin.Mode(msg)
 end
 end
 end
@@ -2217,7 +2220,7 @@ end
 
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' then
 Text = [[
-🔰 Welcome to Source 🔰
+🔰 Welcome to Source KARMEN 🔰
 
 📊┇ [𝘊𝘩𝘢𝘯𝘯𝘦𝘭 𝘒𝘈𝘙𝘔𝘌𝘕](t.me/K3RMEN) 
 
@@ -3313,7 +3316,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if SudoBot(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/KARMENTEAM/Files_KARMEN/master/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/KARMENTEAM/KARMEN/master/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -3351,7 +3354,7 @@ t = "⌯︙الملف ← "..file.."\n⌯︙تم تعطيل ملف \n"
 else
 t = "⌯︙بالتاكيد تم تعطيل ملف → "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/KARMENTEAM/Files_KARMEN/master/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/KARMENTEAM/KARMEN/master/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -3371,7 +3374,7 @@ t = "⌯︙بالتاكيد تم تفعيل ملف → "..file.." \n"
 else
 t = "⌯︙الملف ← "..file.."\n⌯︙تم تفعيل ملف \n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/KARMENTEAM/Files_KARMEN/master/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/KARMENTEAM/KARMEN/master/File_Bot/"..file)
 if res == 200 then
 local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
@@ -9515,7 +9518,7 @@ end
 end   
 --------------------------------------------------------------------------------------------------------------
 SourceKARMEN(data.message_,data)
-plugin_Poyka(data.message_)
+plugin_Mode(data.message_)
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
